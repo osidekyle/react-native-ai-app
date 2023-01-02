@@ -10,14 +10,24 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Header />
-      <ImageLoader />
+      <View style={styles.loaderContainer}>
+      <ImageLoader style={styles.loader}/>
+      </View>
     </View>
   )
 }
 
 
 const styles = StyleSheet.create({
-  
+  loaderContainer: {
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    flex: 1
+  },
+  container: {
+    height: "100%"
+  }
 })
 
 export default App;
