@@ -5,27 +5,30 @@ import * as ImagePicker from 'react-native-image-picker';
 
 const Header = () => {
 
-  const [photo, setPhoto] = useState(null)
+  const [photoUri, setPhotoUri] = useState(null);
 
   const handleChoosePhoto = () => {
     const options = {
       noData: true
     }
     ImagePicker.launchImageLibrary(options, (response) => {
-      if (response.uri) {
-        setPhoto(response)
+      if (response.assets[0].uri) {
+        setPhotoUri(response.assets[0].uri)
       }
     })
   }
 
   return (
-    <View>
-        {photo && (
+    <View style={{height: "100%", width: "100%", justifyContent: "center", alignItems: "center"}}>
+        {photoUri && (
           <Image 
-           source={{uri: photo.uri}}
+           source={{uri: photoUri}}
+           style={{ width: "75%", height: "75%" }}
           />
         )}
-        <Button title="Choose Photo" onPress={handleChoosePhoto}/>
+        { !photoUri && (
+          <Button title="Choose Photo" onPress={handleChoosePhoto}/>
+        )}
     </View>
   )
 }
