@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {View, StyleSheet} from "react-native"
 import Header from "./components/Header"
 import ImageLoader from "./components/ImageLoader"
 
 
 const App = () => {
+
+
 
 
   return (

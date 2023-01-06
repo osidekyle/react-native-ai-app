@@ -10,8 +10,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "react": "17.0.2",
-    "react-native": "0.68.2",
+    "axios": "^1.2.2",
+    "deepai": "^1.0.21",
+    "react": "18.0.0",
+    "react-native": "0.70.0",
     "react-native-image-picker": "^4.10.3"
   },
   "devDependencies": {
