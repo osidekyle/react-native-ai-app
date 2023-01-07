@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import { View, StyleSheet, Button, Image, Text} from 'react-native';
 import * as ImagePicker from 'react-native-image-picker';
